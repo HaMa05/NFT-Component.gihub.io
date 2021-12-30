@@ -1,0 +1,113 @@
+.card {
+  max-width: 350px;
+  padding: 25px;
+  background-color: $cardBg;
+  border-radius: 15px;
+  color: $whiteBG;
+  box-shadow: 0 35px 0 20px $mainBg, 0 30px 0 50px rgba($cardBg, $alpha: 0.1);
+
+  &-text {
+    color: $softBlue;
+
+    &--hover {
+      cursor: pointer;
+      transition: all 0.5s;
+
+      &:hover {
+        color: $cyan;
+      }
+    }
+  }
+
+  &-img {
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+
+    &--overlay {
+      opacity: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($cyan, $alpha: 0.5);
+      transition: opacity 0.5s;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 45px;
+        height: 55px;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        background-image: url('../images/icon-view.svg');
+        background-repeat: no-repeat;
+        object-fit: cover;
+        background-position: center;
+        background-size: contain;
+      }
+    }
+
+    &:hover {
+      .card-img--overlay {
+        opacity: 1;
+      }
+    }
+  }
+
+  &-title {
+    margin: 25px 0;
+    font-weight: $fontWeight-400;
+    font-size: 25px;
+  }
+
+  &-desc {
+    @extend .card-text;
+    font-weight: $fontWeight-300;
+  }
+
+  &-icon {
+    margin-right: 5px;
+  }
+
+  &-anly {
+    @include flexCenter(space-between);
+    margin: 25px 0;
+    padding-bottom: 25px;
+    border-bottom: 1.3px solid rgba($whiteBG, $alpha: 0.3);
+
+    &--volumn,
+    &--time {
+      @include flexCenter(space-between);
+    }
+
+    &--value {
+      color: $cyan;
+      font-size: 20px;
+    }
+
+    &--text {
+      @extend .card-text;
+      font-size: 16px;
+    }
+  }
+
+  &-user {
+    @include flexCenter(space-between);
+
+    &--avatar {
+      max-width: 34px;
+      max-height: 34px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 1.2px solid $whiteBG;
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
