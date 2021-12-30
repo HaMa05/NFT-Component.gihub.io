@@ -227,10 +227,6 @@ body {
 }
 .card-anly--value {
   color: #00fff7;
-  font-size: 20px;
-}
-.card-anly--text {
-  font-size: 16px;
 }
 .card-user {
   display: flex;

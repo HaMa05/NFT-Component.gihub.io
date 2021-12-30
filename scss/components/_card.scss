@@ -84,12 +84,10 @@
 
     &--value {
       color: $cyan;
-      font-size: 20px;
     }
 
     &--text {
       @extend .card-text;
-      font-size: 16px;
     }
   }
 
