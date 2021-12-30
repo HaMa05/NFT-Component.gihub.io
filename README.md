@@ -1,4 +1,5 @@
 # Frontend Mentor - NFT preview card component
+## [View Page](https://hama05.github.io/NFT-Component.gihub.io/)
 
 ![Design preview for the NFT preview card component coding challenge](./design/desktop-preview.jpg)
 
